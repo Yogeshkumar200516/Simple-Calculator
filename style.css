@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 70px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    height: 60px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-operator {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.button-equal {
+    background-color: #4caf50;
+    color: #fff;
+    grid-column: span 2;
+}
+
+.button-special {
+    background-color: #ffb74d;
+    color: white;
+}
+
+/* Previous CSS code */
+
+.button-special {
+    background-color: #ffb74d;
+    color: white;
+}
+
+/* Specific styles for bracket buttons */
+.button-special:nth-child(11),
+.button-special:nth-child(12) {
+    background-color: #4fc3f7;
+}
+
+.button-special:nth-child(11):hover,
+.button-special:nth-child(12):hover {
+    background-color: #29b6f6;
+}
+
+.button-special:nth-child(11):active,
+.button-special:nth-child(12):active {
+    background-color: #039be5;
+}
+
+
+@media screen and (max-width: 400px) {
+    .calculator {
+        width: 300px;
+    }
+
+    .calculator-screen {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
